@@ -1,8 +1,10 @@
+from flask_cors import CORS
 from flask import Flask, request, jsonify
 import openai
 import requests
 
 app = Flask(__name__)
+CORS(app)
 
 import os
 openai.api_key = os.getenv("OPENAI_API_KEY")
