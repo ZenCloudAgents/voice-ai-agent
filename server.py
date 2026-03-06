@@ -16,6 +16,9 @@ ELEVENLABS_API_KEY = os.getenv("ELEVENLABS_API_KEY")
 @app.route("/")
 def home():
     return "AI Voice Agent is running."
+@app.route("/test")
+def test():
+    return "TEST ROUTE WORKING"
 
 @app.route("/ask", methods=["POST"])
 def ask():
