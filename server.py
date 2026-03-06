@@ -4,10 +4,10 @@ import requests
 
 app = Flask(__name__)
 
-openai.api_key = "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"
+import os
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
-ELEVENLABS_API_KEY = "sk_cf540b13c7a96ef10e2abfb66435294338678b3a93e6ef03"
-VOICE_ID = "uYXf8XasLslADfZ2MB4u"
+ELEVENLABS_API_KEY = os.getenv("ELEVENLABS_API_KEY")
 
 @app.route("/ask", methods=["POST"])
 def ask():
