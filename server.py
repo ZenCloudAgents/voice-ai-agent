@@ -44,7 +44,7 @@ def ask():
 
         # Convert AI text to voice using ElevenLabs
         voice = requests.post(
-            "https://api.elevenlabs.io/v1/text-to-speech/EXAVITQu4vr4xnSDxMaL",
+            "https://api.elevenlabs.io/v1/text-to-speech/uYXf8XasLslADfZ2MB4u",
             headers={
                 "xi-api-key": ELEVENLABS_API_KEY,
                 "Content-Type": "application/json"
@@ -74,3 +74,4 @@ def voice():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=3000)
+
